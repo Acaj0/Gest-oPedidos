@@ -1,0 +1,30 @@
+@model IEnumerable<GestaoPedidos.Models.Produto>
+
+<h1>Produtos</h1>
+
+<p>
+    <a href="@Url.Action("Create", "Produtos")" class="btn btn-primary">Criar Produto</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nome</td>
+                <td>@item.Preco</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Produtos", new { id = item.ProdutoId })" class="btn btn-warning">Editar</a>
+                    <a href="@Url.Action("Delete", "Produtos", new { id = item.ProdutoId })" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
