@@ -7,7 +7,7 @@ namespace GestaoPedidos.Models
         public int ProdutoId { get; set; }
         public string Nome { get; set; }
         public decimal Preco { get; set; }
-
+        public bool Ativo { get; set; } = true;
         public ICollection<Pedido> Pedidos { get; set; }
     }
 }

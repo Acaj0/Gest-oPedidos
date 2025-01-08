@@ -20,18 +20,22 @@ namespace GestaoPedidos.Data
             modelBuilder.Entity<Cliente>()
                 .Property(c => c.ClienteId)
                 .HasColumnName("clienteid");
-            
+
             modelBuilder.Entity<Cliente>()
                 .Property(c => c.Nome)
                 .HasColumnName("nome");
-            
+
             modelBuilder.Entity<Cliente>()
                 .Property(c => c.Email)
                 .HasColumnName("email");
-            
+
             modelBuilder.Entity<Cliente>()
                 .Property(c => c.Telefone)
                 .HasColumnName("telefone");
+
+            modelBuilder.Entity<Cliente>()
+                .Property(c => c.Ativo) 
+                .HasColumnName("ativo");
 
             modelBuilder.Entity<Produto>()
                 .Property(p => p.ProdutoId)
@@ -40,10 +44,14 @@ namespace GestaoPedidos.Data
             modelBuilder.Entity<Produto>()
                 .Property(p => p.Nome)
                 .HasColumnName("nome");
-            
+
             modelBuilder.Entity<Produto>()
                 .Property(p => p.Preco)
                 .HasColumnName("preco");
+
+            modelBuilder.Entity<Produto>()
+                .Property(p => p.Ativo) 
+                .HasColumnName("ativo");
 
             modelBuilder.Entity<Pedido>()
                 .Property(p => p.PedidoId)

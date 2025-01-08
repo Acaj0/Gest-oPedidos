@@ -18,7 +18,7 @@ namespace GestaoPedidos.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Clientes.ToListAsync());
+            return View(await _context.Clientes.Where(c => c.Ativo).ToListAsync());
         }
 
         public IActionResult Create()
@@ -110,7 +110,8 @@ namespace GestaoPedidos.Controllers
             var cliente = await _context.Clientes.FindAsync(id);
             if (cliente != null)
             {
-                _context.Clientes.Remove(cliente);
+                cliente.Ativo = false; // Define como inativo
+                _context.Clientes.Update(cliente);
                 await _context.SaveChangesAsync();
             }
             return RedirectToAction(nameof(Index));

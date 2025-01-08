@@ -18,7 +18,7 @@ namespace GestaoPedidos.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Produtos.ToListAsync());
+            return View(await _context.Produtos.Where(p => p.Ativo).ToListAsync());
         }
 
         public IActionResult Create()
@@ -108,8 +108,12 @@ namespace GestaoPedidos.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var produto = await _context.Produtos.FindAsync(id);
-            _context.Produtos.Remove(produto);
-            await _context.SaveChangesAsync();
+            if (produto != null)
+            {
+                produto.Ativo = false; 
+                _context.Produtos.Update(produto); 
+                await _context.SaveChangesAsync();
+            }
             return RedirectToAction(nameof(Index));
         }
     }
