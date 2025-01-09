@@ -1,4 +1,7 @@
+
 @model IEnumerable<GestaoPedidos.Models.Pedido>
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +19,7 @@
         }
 
         .bg-gradient-red {
-            background: linear-gradient(135deg, #501211, #8b1c1d);
+            background: linear-gradient(135deg, #501211, #8b1c1d) !important;
         }
 
         h1 {
@@ -48,8 +51,8 @@
         }
 
         .table thead {
-            background: linear-gradient(135deg, #501211, #8b1c1d);
-            color: white;
+            background: linear-gradient(135deg, #501211, #8b1c1d)!important;
+            color: linear-gradient(135deg, #501211, #8b1c1d);
         }
 
 
@@ -65,7 +68,7 @@
 
     <div class="table-wrapper">
         <table class="table table-bordered table-striped">
-            <thead>
+            <thead class="bg-gradient-red">
                 <tr>
                     <th>Pedido ID</th>
                     <th>Cliente</th>
@@ -92,3 +95,4 @@
     </div>
 
 </body>
+</html>>

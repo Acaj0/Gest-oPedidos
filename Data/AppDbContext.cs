@@ -84,7 +84,7 @@ namespace GestaoPedidos.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseNpgsql("Host=db.iatzleyljainvtyfhrwi.supabase.co;Port=5432;Database=postgres;Username=postgres;Password=Acaj951753258@");
+                optionsBuilder.UseNpgsql("Host=aws-0-sa-east-1.pooler.supabase.com;Port=5432;Database=postgres;Username=postgres.iatzleyljainvtyfhrwi;Password=Acaj951753258@");
             }
         }
     }

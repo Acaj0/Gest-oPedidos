@@ -13,7 +13,7 @@ namespace GestaoPedidos.Controllers
     {
         private readonly AppDbContext _context;
 
-        
+
         public PedidosController(AppDbContext context)
         {
             _context = context;
@@ -30,17 +30,17 @@ namespace GestaoPedidos.Controllers
 
         public IActionResult Create()
         {
-            var clientes = _context.Clientes.ToList();
-            var produtos = _context.Produtos.ToList();
+            var clientes = _context.Clientes.Where(c => c.Ativo).ToList();
+            var produtos = _context.Produtos.Where(p => p.Ativo).ToList();
 
             if (!clientes.Any())
             {
-                return View("Error", new ErrorViewModel { RequestId = "Nenhum cliente encontrado." });
+                return View("Error", new ErrorViewModel { RequestId = "Nenhum cliente ativo encontrado." });
             }
 
             if (!produtos.Any())
             {
-                return View("Error", new ErrorViewModel { RequestId = "Nenhum produto encontrado." });
+                return View("Error", new ErrorViewModel { RequestId = "Nenhum produto ativo encontrado." });
             }
 
             ViewBag.Clientes = clientes;
