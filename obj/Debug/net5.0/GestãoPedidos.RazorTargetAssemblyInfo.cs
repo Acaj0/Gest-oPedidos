@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestãoPedidos")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e08b03233ec8354756701fef162bd74d51471a2d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a68f24ff2498e49d2ca3dd7857305e00206e11d3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestãoPedidos.Views")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 

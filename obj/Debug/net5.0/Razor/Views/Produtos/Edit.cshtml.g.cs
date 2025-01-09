@@ -14,20 +14,20 @@ namespace AspNetCoreGeneratedDocument
     using global::Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "C:\Users\anton\Gest-oPedidos\Views\_ViewImports.cshtml"
-using GestãoPedidos
+using GestaoPedidos
 
 #nullable disable
     ;
 #nullable restore
 #line 2 "C:\Users\anton\Gest-oPedidos\Views\_ViewImports.cshtml"
-using GestãoPedidos.Models
+using GestaoPedidos.Models
 
 #line default
 #line hidden
 #nullable disable
     ;
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"ea090c8cbb317df4663994b337d754b8c332da04e1478f4b1db7abd8cb0f10c0", @"/Views/Produtos/Edit.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"26e666bf546f0d1f3635e223c645da6708bb69ea3214b40b430cb45947fa7366", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"Sha256", @"47c463c094f3ea4cc8d03af4f3b3b3bed5e1d7b86d14ebe4ff83e77502842a35", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     internal sealed class Views_Produtos_Edit : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<
 #nullable restore
