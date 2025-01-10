@@ -1,7 +1,11 @@
-
 @model IEnumerable<GestaoPedidos.Models.Pedido>
+
+@{
+    ViewData["Title"] = "Lista de Pedidos";
+}
 <!DOCTYPE html>
 <html lang="pt-br">
+
 
 <head>
     <meta charset="UTF-8">
@@ -46,12 +50,13 @@
             margin-top: 2rem;
         }
 
-        .table th, .table td {
+        .table th,
+        .table td {
             vertical-align: middle;
         }
 
         .table thead {
-            background: linear-gradient(135deg, #501211, #8b1c1d)!important;
+            background: linear-gradient(135deg, #501211, #8b1c1d) !important;
             color: linear-gradient(135deg, #501211, #8b1c1d);
         }
 
@@ -95,4 +100,5 @@
     </div>
 
 </body>
+
 </html>>

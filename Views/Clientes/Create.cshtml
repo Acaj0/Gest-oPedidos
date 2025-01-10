@@ -1,4 +1,7 @@
 @model GestaoPedidos.Models.Cliente
+@{
+    ViewData["Title"] = "Criar Cliente";
+}
 
 <head>
     <meta charset="UTF-8">
@@ -90,7 +93,7 @@
                     <label for="Telefone" class="control-label">Telefone</label>
                     <input asp-for="Telefone" id="Telefone" class="form-control" required maxlength="15"
                         pattern="^\+?[1-9][0-9]{7,14}$" />
-                    <small class="form-text text-muted">Exemplo: +5511999999999</small>
+                    <small class="form-text text-muted">Exemplo: 11999999999</small>
                     <span asp-validation-for="Telefone" class="text-danger"></span>
                 </div>
 

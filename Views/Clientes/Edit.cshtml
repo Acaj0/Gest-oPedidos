@@ -1,4 +1,7 @@
 @model GestaoPedidos.Models.Cliente
+@{
+    ViewData["Title"] = "Editar Cliente";
+}
 
 <head>
     <meta charset="UTF-8">
@@ -78,19 +81,21 @@
 
                 <div class="form-group">
                     <label asp-for="Nome" class="control-label"></label>
-                    <input asp-for="Nome" class="form-control" />
+                    <input asp-for="Nome" class="form-control" required maxlength="100" />
                     <span asp-validation-for="Nome" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
                     <label asp-for="Email" class="control-label"></label>
-                    <input asp-for="Email" class="form-control" />
+                    <input asp-for="Email" class="form-control" type="email" required maxlength="150" />
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
                     <label asp-for="Telefone" class="control-label"></label>
-                    <input asp-for="Telefone" class="form-control" />
+                    <input asp-for="Telefone" class="form-control" required maxlength="15"
+                        pattern="^\+?[1-9][0-9]{7,14}$" />
+                    <small class="form-text text-muted">Exemplo: 11999999999</small>
                     <span asp-validation-for="Telefone" class="text-danger"></span>
                 </div>
 
