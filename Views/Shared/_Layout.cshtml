@@ -7,11 +7,26 @@
     <title>@ViewData["Title"] - GestãoPedidos</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk&display=swap"
+        rel="stylesheet">
     <style>
         .navbar-brand:hover {
             transform: translateY(-5px);
             transition: all 0.3s ease;
 
+        }
+
+        .navbar-brand {
+            font-family: 'Space Grotesk', sans-serif;
+
+        }
+
+        h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: bold;
+            text-align: center;
         }
 
         .bg-gradient-red {
@@ -37,7 +52,7 @@
                     <a class="navbar-brand text-white" asp-area="" asp-controller="Produtos"
                         asp-action="Index">Produtos</a>
                     <div class="dropdown bg-transparent">
-                        <button class="btn btn-large dropdown-toggle fs-5 text-white" type="button"
+                        <button class="btn navbar-brand btn-large dropdown-toggle fs-5 text-white" type="button"
                             data-bs-toggle="dropdown" aria-expanded="true">
                             Pedidos
                         </button>
