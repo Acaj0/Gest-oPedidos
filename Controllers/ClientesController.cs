@@ -110,7 +110,7 @@ namespace GestaoPedidos.Controllers
             var cliente = await _context.Clientes.FindAsync(id);
             if (cliente != null)
             {
-                cliente.Ativo = false; // Define como inativo
+                cliente.Ativo = false;
                 _context.Clientes.Update(cliente);
                 await _context.SaveChangesAsync();
             }
